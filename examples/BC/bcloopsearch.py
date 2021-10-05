@@ -209,12 +209,15 @@ async def main():
     ctx.load_db_index.segindex = open("db/scop-g.segindex").read()
     ctx.load_db_index.code.mount("load_db_index.py", authority="file")
     ctx.db_index = ctx.load_db_index
-    del ctx.dbca
-    ctx.dbca = dbca
-    ctx.bcloopsearch.dbca = ctx.dbca
+    print("START")
+    #del ctx.dbca
+    #ctx.dbca = dbca
+    #ctx.bcloopsearch.dbca = ctx.dbca
+    ctx.bcloopsearch.dbca = None
     ctx.bcloopsearch.seg_index = ctx.db_index.seg
     ctx.bcloopsearch.pdb_index = ctx.db_index.pdb
     ctx.bcloopsearch.minBC = 0.99
+    #await ctx.translation(force=True)
     await ctx.computation()
 
 
