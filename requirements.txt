@@ -30,5 +30,5 @@ itables==0.2.*
 debugpy==1.2.*
 rpy2==3.4.*
 commentjson==0.9.*
-jupyter-server-proxy==3.1.0
+jupyter-server-proxy==3.2.1
 aiofiles==0.8.*
